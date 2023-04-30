@@ -1,0 +1,26 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            // disable isort because it conflicts with ruff
+            "source.organizeImports": false
+        }
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
+    "python.formatting.blackArgs": [
+        "--config",
+        "pyproject.toml",
+    ],
+    "ruff.args": [
+        "--config",
+        "pyproject.toml",
+    ],
+    "editor.formatOnSave": true,
+}
