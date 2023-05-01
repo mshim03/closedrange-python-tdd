@@ -1,6 +1,6 @@
 import pytest
 
-from numrange import closedrange
+from numrange import ClosedRange
 
 # def test_fail():
 #     assert pytest.fail("これは失敗するはず")
@@ -8,12 +8,12 @@ from numrange import closedrange
 
 @pytest.fixture(scope="module")
 def closed_range_positive():
-    return closedrange(3, 20)
+    return ClosedRange(3, 20)
 
 
 @pytest.fixture(scope="module")
 def closed_range_negative():
-    return closedrange(-10, -3)
+    return ClosedRange(-10, -3)
 
 
 class TestVerifyRange:
@@ -53,8 +53,8 @@ class TestVerifyNum:
     class TestReverseOrder:
         def test_positive_range(self):
             with pytest.raises(ValueError):
-                closedrange(10, 3)
+                ClosedRange(10, 3)
 
         def test_negative_range(self):
             with pytest.raises(ValueError):
-                closedrange(-3, -10)
+                ClosedRange(-3, -10)

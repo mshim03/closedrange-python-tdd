@@ -1,3 +1,3 @@
-from .numrange import closedrange
+from .numrange import ClosedRange
 
-__all__ = ["closedrange"]
+__all__ = ["ClosedRange"]

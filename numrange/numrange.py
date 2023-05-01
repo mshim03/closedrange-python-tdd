@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class closedrange:
+class ClosedRange:
     lower: int
     upper: int
 
